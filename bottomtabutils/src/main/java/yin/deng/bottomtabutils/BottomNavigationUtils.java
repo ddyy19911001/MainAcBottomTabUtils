@@ -92,6 +92,15 @@ public class BottomNavigationUtils {
         }
     }
 
+    public  void create(EasyNavigationBar navigationBar,int pageLimit){
+        if(navigationBar!=null){
+            navigationBar.build();
+            navigationBar.getmViewPager().setOffscreenPageLimit(pageLimit);
+        }else{
+            throw new RuntimeException("navigationBar can not be null!");
+        }
+    }
+
 
     /**
      * 设置数字消息提示
